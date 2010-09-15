@@ -1,0 +1,11 @@
+<h1>Editing time_box</h1>
+
+<% form_for(@time_box) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @time_box %> |
+<%= link_to 'Back', time_boxes_path %>

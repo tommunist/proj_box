@@ -1,0 +1,193 @@
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100915043519)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.2ms)[0m   [0;1mCREATE TABLE "projects" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100915043519')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "projects" ("name", "created_at", "updated_at", "description") VALUES(E'test', '2010-09-15 04:39:44.233006', '2010-09-15 04:39:44.233006', E'blah') RETURNING "id"[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mINSERT INTO "projects" ("name", "created_at", "updated_at", "description") VALUES(E'tes2222t', '2010-09-15 04:39:53.203000', '2010-09-15 04:39:53.203000', E'blaaoeuh') RETURNING "id"[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100915043519)
+Migrating to CreateTimeBoxes (20100915044229)
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCREATE TABLE "time_boxes" ("id" serial primary key, "name" character varying(255), "highlights" text, "project_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100915044229')[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#index (for 127.0.0.1 at 2010-09-15 14:46:12) [GET]
+  [4;36;1mTimeBox Load (2.5ms)[0m   [0;1mSELECT * FROM "time_boxes" [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/index
+Completed in 158ms (View: 127, DB: 4) | 200 OK [http://0.0.0.0/time_boxes]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#new (for 127.0.0.1 at 2010-09-15 14:46:14) [GET]
+Rendering template within layouts/time_boxes
+Rendering time_boxes/new
+  [4;35;1mProject Load (2.2ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendered time_boxes/_form (98.7ms)
+Completed in 138ms (View: 116, DB: 3) | 200 OK [http://0.0.0.0/time_boxes/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#create (for 127.0.0.1 at 2010-09-15 14:46:25) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iOR/D3bkJQdO0AX7K9sGb9XnvpOZ33l3jxssvft/v1k=", "time_box"=>{"highlights"=>"weeeeee was fun", "name"=>"Testy", "project_id"=>"1"}}
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (21.4ms)[0m   [0mINSERT INTO "time_boxes" ("name", "highlights", "created_at", "project_id", "updated_at") VALUES(E'Testy', E'weeeeee was fun', '2010-09-15 04:46:25.784571', 1, '2010-09-15 04:46:25.784571') RETURNING "id"[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/time_boxes/1
+Completed in 58ms (DB: 24) | 302 Found [http://0.0.0.0/time_boxes]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 14:46:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.8ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 52ms (View: 27, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#index (for 127.0.0.1 at 2010-09-15 14:46:32) [GET]
+  [4;35;1mTimeBox Load (2.8ms)[0m   [0mSELECT * FROM "time_boxes" [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/index
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 50ms (View: 31, DB: 5) | 200 OK [http://0.0.0.0/time_boxes]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-15 14:54:04) [GET]
+
+ActionController::RoutingError (No route matches "/projects" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-15 14:54:55) [GET]
+
+ActionController::RoutingError (No route matches "/projects" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#index (for 127.0.0.1 at 2010-09-15 14:55:01) [GET]
+  [4;36;1mTimeBox Load (2.8ms)[0m   [0;1mSELECT * FROM "time_boxes" [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/index
+  [4;35;1mProject Load (2.0ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 197ms (View: 164, DB: 6) | 200 OK [http://0.0.0.0/time_boxes]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProjects (20100915043519)
+Migrating to CreateTimeBoxes (20100915044229)
+  [4;35;1mSQL (0.9ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-15 15:01:18) [GET]
+
+ActionController::RoutingError (No route matches "/time_box/1" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 15:01:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 64ms (View: 38, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:01:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+
+ActionView::MissingTemplate (Missing template time_boxes/show.erb in view path app/views):
+  app/controllers/time_boxes_controller.rb:21:in `show'
+  app/controllers/time_boxes_controller.rb:18:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:03:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.8ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+Completed in 396ms (View: 370, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 15:05:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 44ms (View: 19, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:05:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (1.9ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+Completed in 297ms (View: 274, DB: 3) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:06:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 314ms (View: 289, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]

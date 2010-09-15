@@ -1,0 +1,24 @@
+<h1>Listing time_boxes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Highlights</th>
+    <th>Project</th>
+  </tr>
+
+<% @time_boxes.each do |time_box| %>
+  <tr>
+    <td><%=h time_box.name %></td>
+    <td><%=h time_box.highlights %></td>
+    <td><%=h time_box.project_name %></td>
+    <td><%= link_to 'Show', time_box %></td>
+    <td><%= link_to 'Edit', edit_time_box_path(time_box) %></td>
+    <td><%= link_to 'Destroy', time_box, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New time_box', new_time_box_path %>

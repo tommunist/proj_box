@@ -1,0 +1,17 @@
+<p>
+  <b>Name:</b>
+  <%=h @time_box.name %>
+</p>
+
+<p>
+  <b>Highlights:</b>
+  <%=h @time_box.highlights %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%=h @time_box.project_name %>
+</p>
+
+<%= link_to 'Edit', edit_time_box_path(@time_box) %> |
+<%= link_to 'Back', time_boxes_path %>
