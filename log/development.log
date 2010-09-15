@@ -191,3 +191,307 @@ Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:06:31
 Rendering time_boxes/show
   [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
 Completed in 314ms (View: 289, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:11:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 619ms (View: 593, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:16:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+
+ActionView::TemplateError (undefined method `bounding_box' for #<ActionView::Base:0x2af5404>) on line #3 of app/views/time_boxes/show.pdf.prawn:
+1: pdf.text "Time Box: #{@time_box.name}", :size => 16, :style => :bold, :spacing => 4
+2: 
+3: bounding_box [100,600], :width => 200 do
+4:     move_down 10
+5:     text "The rain in spain falls mainly on the plains " * 5
+6:     move_down 20
+
+    app/views/time_boxes/show.pdf.prawn:3:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    app/controllers/time_boxes_controller.rb:21:in `show'
+    app/controllers/time_boxes_controller.rb:18:in `show'
+
+Rendered rescues/_trace (85.9ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:17:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+
+ActionView::TemplateError (undefined method `bounding_box' for #<ActionView::Base:0x2d6b1e8>) on line #3 of app/views/time_boxes/show.pdf.prawn:
+1: pdf.text "Time Box: #{@time_box.name}", :size => 16, :style => :bold, :spacing => 4
+2: 
+3: bounding_box [100,600], :width => 200 do
+4:     move_down 10
+5:     text "The rain in spain falls mainly on the plains " * 5
+6:     move_down 20
+
+    app/views/time_boxes/show.pdf.prawn:3:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    app/controllers/time_boxes_controller.rb:23:in `show'
+    app/controllers/time_boxes_controller.rb:20:in `show'
+
+Rendered rescues/_trace (155.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:18:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (1.9ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 554ms (View: 530, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:20:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+
+ActionView::TemplateError (undefined method `bounding_box' for #<ActionView::Base:0x2b780c0>) on line #2 of app/views/time_boxes/show.pdf.prawn:
+1: pdf.text "Time Box: #{@time_box.name}", :size => 16, :style => :bold, :spacing => 4
+2: bounding_box [100,600], :width => 200 do
+3:     move_down 10
+4:     text "The rain in spain falls mainly on the plains " * 5
+5:     move_down 20
+
+    app/views/time_boxes/show.pdf.prawn:2:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    app/controllers/time_boxes_controller.rb:23:in `show'
+    app/controllers/time_boxes_controller.rb:20:in `show'
+
+Rendered rescues/_trace (160.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:25:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 549ms (View: 525, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:26:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (1.9ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 642ms (View: 617, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:27:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+
+ActionView::TemplateError (undefined method `horizontal_line' for #<ActionView::Base:0x2e193ec>) on line #4 of app/views/time_boxes/show.pdf.prawn:
+1: pdf.text "Time Box: #{@time_box.name}", :size => 16, :style => :bold, :spacing => 4
+2: pdf.curve [50,100], [100,100], :bounds => [[90,90],[75,75]]
+3: 
+4: horizontal_line 25, 100, :at => 75  
+5: pdf.curve_to [100,100], :bounds => [[90,90],[75,75]]
+6: 
+7: pdf.text "Project: #{@time_box.project_name}"
+
+    app/views/time_boxes/show.pdf.prawn:4:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    app/controllers/time_boxes_controller.rb:23:in `show'
+    app/controllers/time_boxes_controller.rb:20:in `show'
+
+Rendered rescues/_trace (82.1ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:27:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (1.9ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 624ms (View: 600, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 15:27:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.8ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 44ms (View: 19, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 15:28:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.1ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 44ms (View: 19, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:28:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 555ms (View: 530, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:28:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 626ms (View: 601, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:30:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.5ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 566ms (View: 537, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 15:40:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.1ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 551ms (View: 527, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show (for 127.0.0.1 at 2010-09-15 16:15:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.0ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering template within layouts/time_boxes
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.9ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 142ms (View: 92, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:15:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (2.2ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;35;1mProject Load (1.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 689ms (View: 617, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:30:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTimeBox Load (1.9ms)[0m   [0;1mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+
+ActionView::TemplateError (undefined method `line' for #<ActionView::Base:0x2c56fc8>) on line #2 of app/views/time_boxes/show.pdf.prawn:
+1: pdf.text "Time Box: #{@time_box.name}", :size => 16, :style => :bold, :spacing => 4
+2: pdf.stroke{line([0,0], [50,50])}
+3: pdf.circle_at [100,100], :radius => 25
+4: pdf.circle_at [0,0], :radius => 2
+5: pdf.curve [50,100], [100,100], :bounds => [[90,90],[75,75]]
+
+    app/views/time_boxes/show.pdf.prawn:2:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    /usr/local/lib/ruby/gems/1.8/gems/prawn-core-0.8.4/lib/prawn/graphics.rb:270:in `stroke'
+    app/views/time_boxes/show.pdf.prawn:2:in `_run_prawn_app47views47time_boxes47show46pdf46prawn'
+    app/controllers/time_boxes_controller.rb:23:in `show'
+    app/controllers/time_boxes_controller.rb:20:in `show'
+
+Rendered rescues/_trace (160.8ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:31:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 557ms (View: 531, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:32:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 549ms (View: 524, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:33:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.1ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 629ms (View: 604, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:34:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (1.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 551ms (View: 527, DB: 4) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing TimeBoxesController#show to pdf (for 127.0.0.1 at 2010-09-15 16:34:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTimeBox Load (2.0ms)[0m   [0mSELECT * FROM "time_boxes" WHERE ("time_boxes"."id" = 1) [0m
+Rendering time_boxes/show
+  [4;36;1mProject Load (2.0ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Completed in 633ms (View: 607, DB: 5) | 200 OK [http://0.0.0.0/time_boxes/1.pdf]

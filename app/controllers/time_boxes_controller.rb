@@ -1,4 +1,6 @@
 class TimeBoxesController < ApplicationController
+  prawnto :prawn=>{:page_layout=>:landscape}
+  
   # GET /time_boxes
   # GET /time_boxes.xml
   def index
